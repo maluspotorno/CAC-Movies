@@ -352,6 +352,7 @@ body {
                 flex-direction: column;
                 justify-content: space-between;
                 border-radius: 15px;
+                cursor: pointer;
             }
 
         }

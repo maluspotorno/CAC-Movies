@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: nunito;
-    src: url(/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+    src: url(./fonts/Nunito/Nunito-VariableFont_wght.ttf);
 }
 
 *{
@@ -129,7 +129,7 @@ body {
 
         #principal{
             height:90vh;
-            background-image: url(/img/banner-bg.jpg);
+            background-image: url(./img/banner-bg.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;

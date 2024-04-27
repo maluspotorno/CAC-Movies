@@ -154,6 +154,7 @@ body {
                 background-color: var(--bgprimary);
                 padding: 0.5rem 1.25rem;
                 border-radius: 10px;
+                cursor: pointer;
             }
 
             a:hover {
@@ -203,11 +204,12 @@ body {
                     background-color: #9f3647;
                     width: 8rem;
                     height: 3em;
-                    padding: 1em;
-                    border: 2px solid white;
+                    padding: auto;
+                    border: 1px solid white;
                     border-radius: 25px;
                     outline: none;
                     cursor: pointer;
+                    font-weight: 700;
                 }
                 .searchButton:hover {
                     background-color: #8f2637;
@@ -366,18 +368,19 @@ footer {
     justify-content: center;
     align-items: center;
     
-    
     div{
         ul{
             li{
+                padding: 55px;
                 list-style: none;
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     footer {
+        height: auto;
         div{
             ul{
                 display: flex;

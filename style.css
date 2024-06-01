@@ -107,7 +107,7 @@ body {
                     background-color: #8f2637;
                 }
     
-                li:last-child{
+                li:nth-child(3), li:nth-child(4){
                     background-color: #181419;
                     border-radius: 7px;
                     color: white;
@@ -115,10 +115,10 @@ body {
                     transition: 0.3s;
                 }
                 
-                li:last-child:hover{
+                li:nth-child(3):hover, li:nth-child(4):hover{
                     background-color: #282429;
                 }
-                li:last-child:active{
+                li:nth-child(3):active, li:nth-child(4):active{
                     background-color: #383439;
                 }
             }
@@ -289,11 +289,20 @@ body {
                         width: 180px; 
                         height: 270px;
                         border-radius: 15px;
+                        background-size: cover;
+                        position: relative;
                     }
-        
-                    img:hover {
-                        filter: blur(3px);
-                    }
+
+                    /* img::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        inset: 0;
+                        position: absolute;
+                        background: inherit;
+                        filter: blur(15px) contrast(200%);
+                        z-index: -1;
+                    } */
         
                     p {
                         opacity: 0;
@@ -309,12 +318,17 @@ body {
                         width: 70%;
                         transform: translate(-50%, -50%);
                         max-width: 20rem;
+                        cursor: pointer;
                     }
+                    
                 }
         
                 div:hover p {
                     display: block;
                     opacity: 1;
+                }
+                div:hover img {
+                    filter:blur(3px);
                 }
             }
         }
@@ -378,7 +392,80 @@ footer {
     }
 }
 
+.error {
+    color: red;
+}
+.valid {
+    color: red;
+}
+
 @media screen and (max-width: 991px) {
+    footer {
+        height: auto;
+        div{
+            display: flex;
+
+            ul{
+                display: flex;
+                /* flex-direction: column; */
+                /* row-gap: 15px; */
+                /* align-items: center;
+                justify-content: center; */
+                padding: 20px 20px;   
+                li{
+                    list-style: none;
+                    margin: 20 0;
+                }
+            }
+        }
+    }
+
+    main {
+        .search {
+            height:50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                color: white;
+                font-size: min(4vw, 2em);
+                text-align: center;
+            }
+
+            form {
+                /* margin: auto !important; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center !important;
+                align-items: center !important;
+                
+                .searchInput {
+                    width: 20em !important;
+                    margin: auto !important;
+                }
+
+                .searchButton {
+                    width: 5em !important;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    header {
+        nav {
+            display: flex;
+            /* justify-content: space-between; */
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            margin: 0 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
     footer {
         height: auto;
         div{
@@ -398,13 +485,15 @@ footer {
         }
     }
 
+    
+
     header {
+        height: 150px !important;
         nav {
             display: flex;
             /* justify-content: space-between; */
             flex-direction: column;
             align-items: center;
-            height: 100%;
             margin: 0 2rem;
         }
     }
